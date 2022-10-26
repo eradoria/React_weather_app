@@ -5,8 +5,9 @@ function Weather() {
   const [data, setData] = useState([]);
   const [input, setInput] = useState("");
 
+  // eslint-disable-next-line
   let componentMounted = true;
-
+  
   useEffect(() => {
     const fetchWeather = async () => {
         const response =  await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}
@@ -16,6 +17,7 @@ function Weather() {
             console.log(data)
           }
           return () => {
+            // eslint-disable-next-line
             componentMounted = false;
           }
       }
@@ -25,14 +27,19 @@ function Weather() {
 
     let emoji = null;
     if (typeof data.main != "undefined") {
+      // eslint-disable-next-line
       if (data.weather[0].main == "Clouds") {
         emoji = "fa-cloud"
+        // eslint-disable-next-line
       }else if (data.weather[0].main == "Thunderstorm") {
         emoji = "fa-bolt"
+        // eslint-disable-next-line
       }else if (data.weather[0].main == "Drizzle") {
         emoji = "fa-cloud-rain"
+        // eslint-disable-next-line
       }else if (data.weather[0].main == "Rain") {
         emoji = "fa-cloud-shower-heavy"
+        // eslint-disable-next-line
       }else if (data.weather[0].main == "Snow") {
         emoji = "fa-snow-flake"
       }else {
@@ -58,8 +65,7 @@ function Weather() {
     //Time
     let time = d.toLocaleDateString([],{
         hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
+        minute: '2-digit'
     });
 
     const handleSubmit = (event) => {
