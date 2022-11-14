@@ -91,9 +91,9 @@ function Weather() {
     let year = d.getFullYear()
     let month = d.toLocaleDateString("default", {month:'long'});
     let day = d.toLocaleDateString("default", {weekday:'long'});
-    let tomorrow = tm.toLocaleDateString("default", {weekday:'long'});
-    let nextDay = nd.toLocaleDateString("default", {weekday:'long'});
-    let dayAfter = da.toLocaleDateString("default", {weekday:'long'});
+    // let tomorrow = tm.toLocaleDateString("default", {weekday:'long'});
+    // let nextDay = nd.toLocaleDateString("default", {weekday:'long'});
+    // let dayAfter = da.toLocaleDateString("default", {weekday:'long'});
 
     //Time
     let time = d.toLocaleDateString([],{
@@ -152,7 +152,7 @@ function Weather() {
                 
                   <div className=" bg-dark bg-opacity-50 d-flex flex-row bd-highlight mb-3 justify-content-center  gap-5">
                   
-                      <div>
+                      {/* <div>
                         <p>{tomorrow}</p>
                         <i className={`fas ${emoji} fa-2x`}></i>
                         <p className='lead fw-boulder mb-0'>{dataTwo.list[0].main.temp_max.toFixed(0)}/{dataTwo.list[0].main.temp_min.toFixed(0)} </p>
@@ -171,7 +171,7 @@ function Weather() {
                         <i className={`fas ${emoji} fa-2x`}></i>
                         <p className='lead fw-boulder mb-0'>{dataTwo.list[18].main.temp_max.toFixed(0)}/{dataTwo.list[18].main.temp_min.toFixed(0)} </p>
                         <p className='fw-boulder mb-0'>{dataTwo.list[18].weather[0].main}</p>
-                      </div>
+                      </div> */}
                     
                 </div>
               </div>
